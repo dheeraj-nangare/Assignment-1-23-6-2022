@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Student's Id Card Generator</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='idcard.css'>
+    <script src='idCard.js'></script>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+        integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+
+<body style="margin: 0;">
+    <h1 style="text-align: center; background: #4047F0; border-radius: 14px 15px 0px 0px; color: white;margin: 0;">Id Card
+        Generator</h1>
+
+    <div style="display: flex;border-bottom: 1px solid;justify-content: center;">
+        <div id="formId" style="text-align: left;border-right: 1px solid;">
+
+            <h1 style="text-align: center;color:#4047F0">Enter Student Details</h1>
+
+            <form onsubmit="generateIdCard(event)"> 
+                <div style="height: 381px;width: 420px;    text-align: left;margin-top: 25px">
+
+                    <div style="margin-top: 23px;">
+                        <label style="display: block;font-weight: bold;">Enter Name :</label>
+                        <input type="Text" id="inputNameId" placeholder="Enter Your Name" style="border-radius: 8px;width: 191px;
+                        height: 26px;" autocomplete="off" required>
+                    </div>
+
+                    <div style="margin-top: 23px;">
+
+                        <label style="display: block;font-weight: bold;">Enter Collage Name:</label>
+                        <input type="Text" id="inputCollageName" placeholder="Enter Collage Name" style="border-radius: 8px;width: 191px;
+                        height: 26px;" autocomplete="off" required>
+
+                    </div>
+
+                    <div style="margin-top: 23px;">
+
+                        <label style="display: block;font-weight: bold;">Enter Location:</label>
+                        <input type="Text" id="inputLocation" placeholder="Enter Location" style="border-radius: 8px;width: 191px;
+                        height: 26px;"autocomplete="off" required>
+
+                    </div>
+
+
+                    <div style="margin-top: 23px;">
+                        <label style="display: block;font-weight: bold;" for="img">Select Students's image:</label>
+                        <input type="file" name="img" accept="image/*" id="inputImageId" onchange="loadImage(event)" required>
+
+                    </div>
+
+                    <div style="margin-top: 23px;">
+                        <input type="submit" class="button_css" value="Generate card" >
+
+                    </div>
+
+                </div>
+            </form>
+
+
+        </div>
+
+
+
+        <!-- id card div  -->
+
+        <div id="id-card-div"
+            style="display:flex; height: 242px; width: 504px; margin-top:121px;margin-left:30px;border: 1px solid;border-radius: 17px;align-items: center;visibility: hidden;">
+
+            <div style="height: 100%;background-color:  #4047F0;display: flex;
+                justify-content: center;
+                align-items: center;
+                width: 30%;border-radius: 12px 0 0 12px;">
+                <img height="100px" width="100px" style="border-radius: 25px;" id="imageid">
+            </div>
+
+            <!-- information div  -->
+
+            <div style="padding: 40px;">
+
+                <div style="padding: 20px;">
+                    <span>Name:</span>
+                    <span id="nameid"></span>
+                </div>
+
+                <div style="padding: 20px;">
+                    <span>Collage Name:</span>
+                    <span id="collageId"></span>
+                </div style="padding: 20px;">
+
+
+                <div style="padding: 20px;">
+                    <span>Location:</span>
+                    <span id="locationId"></span>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

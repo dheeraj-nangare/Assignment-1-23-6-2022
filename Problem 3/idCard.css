@@ -1,0 +1,28 @@
+
+
+.button_css{
+  background-color: #4047F0;
+color:white;
+width: 113px;
+height: 34px;
+  border-radius: 18px;
+}
+
+#inputNameId:focus::-webkit-input-placeholder{
+  opacity: 0;
+  -webkit-transition: opacity .4s ease-in-out;
+}
+
+
+#inputCollageName:focus::-webkit-input-placeholder{
+  opacity: 0;
+  -webkit-transition: opacity .4s ease-in-out;
+
+}
+
+#inputLocation:focus::-webkit-input-placeholder{
+
+  opacity: 0;
+  -webkit-transition: opacity .4s ease-in-out;
+
+}
